@@ -1,0 +1,12 @@
+version: "3"
+services:
+  ubuntu:
+    build: ./build/ubuntu
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority
+      - $PWD:/home/usr/app
+    command: /sbin/init
+
