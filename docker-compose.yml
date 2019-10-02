@@ -9,4 +9,3 @@ services:
       - $HOME/.Xauthority:/root/.Xauthority
       - $PWD:/home/usr/app
     command: /sbin/init
-
