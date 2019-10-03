@@ -4,7 +4,7 @@ up:
 	docker-compose up -d
 exec:
 	docker-compose exec ubuntu /bin/bash
-start:
+entry:
 	make build
 	make up
 	make exec

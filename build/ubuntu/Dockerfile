@@ -36,6 +36,7 @@ RUN apt-get install -y xz-utils
 RUN apt-get install -y tk-dev 
 RUN apt-get install -y libffi-dev 
 RUN apt-get install -y liblzma-dev
+RUN apt install build-essential -y
 
 RUN apt-get install python3.7 python-pip python3-pip python3-tk -y
 RUN pip install --upgrade pipenv
@@ -43,4 +44,3 @@ RUN apt install xserver-xorg -y
 RUN apt-get install -y x11-apps
 RUN apt-get install  xorg -y
 RUN apt-get install vim -y
-
