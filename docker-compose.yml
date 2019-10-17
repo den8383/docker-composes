@@ -7,5 +7,5 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - $HOME/.Xauthority:/root/.Xauthority
-      - $PWD:/home/usr/app
+      - ./:/home/usr/app
     command: /sbin/init
