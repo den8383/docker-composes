@@ -39,6 +39,7 @@ RUN apt-get install -y liblzma-dev
 RUN apt install build-essential -y
 
 RUN apt-get install python3.7 python-pip python3-pip python3-tk -y
+RUN pip install --upgrade pip
 RUN pip install --upgrade pipenv
 RUN pip install git+https://github.com/pypa/pipenv.git
 RUN pipenv update --pre --dev 
