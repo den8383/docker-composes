@@ -12,7 +12,6 @@ EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 
 WORKDIR /home/usr/app/
-ENV HOME /home/usr/
 
 ENV PYTHON_ROOT $HOME/local/python-$PYTHON_VERSION
 ENV PATH $PYTHON_ROOT/bin:$PATH
@@ -47,4 +46,5 @@ RUN apt install xserver-xorg -y
 RUN apt-get install -y x11-apps
 RUN apt-get install  xorg -y
 RUN apt-get install vim -y
-
+COPY Pipfile* ./
+RUN pipenv install

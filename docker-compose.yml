@@ -1,7 +1,9 @@
 version: "3"
 services:
   ubuntu:
-    build: ./docker_files/ubuntu
+    build: 
+      context: ./
+      dockerfile: ./docker_files/ubuntu/Dockerfile
     network_mode: "host"
     environment:
       - DISPLAY=${DISPLAY}
